@@ -1,6 +1,6 @@
 # Avaliação #07 Camada de Persistência & Query Object
 
-**Classroom:** <https://classroom.github.com/a/>
+**Classroom:** <https://classroom.github.com/a/tAAjQlGu>
 
 ## Tarefas
 
