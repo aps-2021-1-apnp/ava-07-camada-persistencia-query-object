@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from 'http'
-import { parse } from 'url'
+import { URL } from 'url'
 import { Command } from './Command'
 
 // NOP = no operation
@@ -21,7 +21,7 @@ export class FrontController {
   }
 
   handle(req: IncomingMessage, resp: ServerResponse): void {
-    const url = parse(req.url ?? '', true)
+    const url = new URL(req.url ?? '', 'http://localhost:9999/')
     // pathname = '/usuarios'
     if (url.pathname && this.routing[url.pathname]) {
       if (req.method && this.routing[url.pathname][req.method]) {
